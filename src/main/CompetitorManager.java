@@ -27,7 +27,7 @@ public class CompetitorManager {
         int choice = 0;
 
         do {
-            System.out.println("\n---------------------------------------------- Competitor Management System ----------------------------------------------");
+            System.out.println("\nCompetitor Management System ");
             System.out.println("1. Generate Full Report");
             System.out.println("2. Display Top Performer");
             System.out.println("3. Generate Statistics");
@@ -58,12 +58,12 @@ public class CompetitorManager {
      * Generates and displays a full report of all competitors.
      */
     private void generateFullReport() {
-        System.out.println("\n------------------------------------------------------x Full Report x-----------------------------------------------------\n");
+        System.out.println("\nFull Report \n");
 
         System.out.printf("%-5s %-20s %-12s %-20s %-8s\n",
                 "ID", "Name", "Level", "Scores", "Overall");
 
-        System.out.println("--------------------------------------------------------------------");
+        System.out.println("-------------------------------------");
 
         for (Competitor c : competitorList.getAll()) {
             int[] scores = c.getScoreArray();
@@ -81,7 +81,7 @@ public class CompetitorManager {
         }
 
 
-        System.out.println("--------------------------------------------------------------------");
+        System.out.println("-------------------");
     }
 
     /**
@@ -93,7 +93,7 @@ public class CompetitorManager {
             System.out.println("No competitors found.");
             return;
         }
-        System.out.println("\n----------------------------------------------------x Top Performer x-----------------------------------------------------\n");
+        System.out.println("\n op Performer\n");
         System.out.println(top.getFullDetails());
     }
     
@@ -102,7 +102,7 @@ public class CompetitorManager {
      */
     private void generateStatistics() {
         int[] freq = competitorList.getScoreFrequency();
-        System.out.println("\n------------------------------------------------------x Statistics x------------------------------------------------------\n");
+        System.out.println("\n Statistics \n");
         System.out.println("\nTotal competitors: " + competitorList.size());
         System.out.println("Score Frequency:");
 
@@ -115,7 +115,7 @@ public class CompetitorManager {
      * Searches for a competitor by ID and displays short details.
      */
     private void searchByID() {
-        System.out.println("\n----------------------------------------------------x Competitor ID x-----------------------------------------------------\n");
+        System.out.println("\n Competitor ID \n");
         System.out.print("Enter Competitor ID: ");
         int id = Integer.parseInt(scanner.nextLine());
 

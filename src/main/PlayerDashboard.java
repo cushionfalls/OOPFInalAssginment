@@ -12,13 +12,8 @@ public class PlayerDashboard extends JFrame {
     private int competitorID;
 
     public static void main(String[] args) {
-        EventQueue.invokeLater(() -> {
-            try {
-                new PlayerDashboard(1, CompetitorDAO.getCompetitorID(1)).setVisible(true);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
+        MainApp mainapp = new MainApp();
+        mainapp.main(null);
     }
 
     public PlayerDashboard(int playerID, int competitorID) {

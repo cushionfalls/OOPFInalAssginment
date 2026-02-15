@@ -14,14 +14,8 @@ public class AddQuestionFrame extends JFrame {
     private JPanel contentPane;
 
     public static void main(String[] args) {
-        EventQueue.invokeLater(() -> {
-            try {
-                AddQuestionFrame frame = new AddQuestionFrame();
-                frame.setVisible(true);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
+        MainApp mainapp = new MainApp();
+        mainapp.main(null);
     }
 
     /**

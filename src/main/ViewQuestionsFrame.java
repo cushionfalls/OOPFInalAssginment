@@ -16,14 +16,8 @@ public class ViewQuestionsFrame extends JFrame {
     private JTable table;
 
     public static void main(String[] args) {
-        EventQueue.invokeLater(() -> {
-            try {
-                ViewQuestionsFrame frame = new ViewQuestionsFrame();
-                frame.setVisible(true);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
+        MainApp mainapp = new MainApp();
+        mainapp.main(null);
     }
 
     public void loadQuestions() {
